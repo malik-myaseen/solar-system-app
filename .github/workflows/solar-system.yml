@@ -7,11 +7,7 @@ on:
             - main
             - 'feature/*'
             - workflow_dispatch
- 
-env:
-    MONGO_URI: ${{ vars.MONGO_URI }}
-    MONGO_USERNAME: ${{ vars.MONGO_USERNAME }}
-    MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}            
+         
 
 jobs:
     unit-testing:
@@ -152,7 +148,7 @@ jobs:
           - name: Install Kubectl CLI
             uses: azure/setup-kubectl@v4
             with:
-                version: 'v1.29.7' 
+                version: 'v1.29.10' 
 
           - name: Set Kubeconfig file
             uses: azure/k8s-set-context@v4
